@@ -88,7 +88,7 @@ class AdminUser extends User{
     changeOtherUser(){
         //check if user is Admin
         const userPerforming = users.find((item) => item.id === this.user_id);
-        if(!userIndex) return console.log("user doesn't exist");
+        if(!userPerforming) return console.log("user doesn't exist");
         if(userPerforming.role !== 'admin'){
             return console.log(`Hybo ${userPerforming.name} Only Nigel admin can perform this`);
        }
